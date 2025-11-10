@@ -51,9 +51,11 @@ import jackDiamonds from "./images/JD.png";
 import queenDiamonds from "./images/QD.png";
 import kingDiamonds from "./images/KD.png";
 import cardBack from "./images/back.png";
+import type { CardData } from "./card";
 
-export const cards = [
+export const cards : CardData[] = [
   {
+    
     index: 0,
     face: "ace",
     lowValue: 1,
