@@ -1,6 +1,7 @@
 //import { useState } from 'react'
 import { Card, type CardData } from './components/card';
 import {cards} from './components/cards';
+import { Hand } from './components/hand';
 
 import './App.css'
 
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Card card={cards[25]} reveal={true} />
+      <Hand hand={[cards[25], cards[2], cards[31]]} reveal={true} />
     </>
   )
 }
