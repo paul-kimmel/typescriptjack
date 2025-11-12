@@ -19,7 +19,8 @@ function App() {
 
   return (
     <>
-      <Hand hand={[cards[25], cards[2], cards[31]]} reveal={true} />
+      {/* <Hand hand={[cards[12], cards[2], cards[33]]} reveal={true} /> */}
+      <Hand hand={cards.slice(12,15)} reveal={true} />
     </>
   )
 }

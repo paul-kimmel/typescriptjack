@@ -13,7 +13,7 @@ export interface Shoe{
   moreCards: () => boolean;
   dump: (limit?: number) => void;
   get: (index: number) => CardData;
-  getPair: () => [CardData, CardData];
+  getPair: () => CardData[];
   remove: (card: CardData) => void;
   removeAt: (index: number) => CardData[] | undefined;
 }
@@ -60,13 +60,16 @@ export function createShoe(deckCount: number) :Shoe {
 
   function getPair() :CardData[] {
     const card1 = getNextCard();
+    let cards : CardData[] = [];
+    cards.push(card1);
 
     for (let i = 0; i < cardList.length; i++) {
       let result = get(i);
 
       if (card1.face === result.face) {
         removeAt(i);
-        return [card1, result];
+        cards.push(result);
+        return cards;
       }
     }
 
@@ -93,7 +96,7 @@ export function createShoe(deckCount: number) :Shoe {
     return cardList.length > 0;
   }
 
-  function dump(limit: number) {
+  function dump(limit?: number | undefined): void {
     if (limit === undefined) {
       limit = cardList.length;
     }
@@ -103,5 +106,6 @@ export function createShoe(deckCount: number) :Shoe {
     }
   }
 
-  return {deckCount, cardList, initialize, shuffle, addDecks, getNextCard, count, moreCards, dump, get, getPair, remove, removeAt};
+  return {deckCount, cardList, initialize, shuffle, addDecks, getNextCard, count, moreCards, 
+    dump, get, getPair, remove, removeAt};
 }
