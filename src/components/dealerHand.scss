@@ -6,8 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px; //temporary fix for dealer hand position
-
+  
   div{
     display: flex;
 
@@ -20,6 +19,6 @@
 }
 
 .player-name {
-  // color: white;
+  color: white;
   font-size: 125%;
 }
