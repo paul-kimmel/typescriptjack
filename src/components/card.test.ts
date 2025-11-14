@@ -1,25 +1,23 @@
+import React from "react";
 import { it, expect } from 'vitest';
 import { cards } from './cards';
-import { Card } from './card';
+import { textCardValue, Card, type CardProps  } from './card';
 
 it('Test TextCardValue', async () => {
 
   const card = cards[2];
-  const o = new Card({card, reveal: false});
-  console.log(`Card text value: ${o.textCardValue()}`);
-  expect(o.textCardValue()).toEqual("3♠");
+  const element = React.createElement(Card, {card: card, reveal: false});
+  
+  console.log(`Card text value: ${textCardValue(element.props.card)}`);
+  expect(textCardValue(card)).toEqual("3♠");
 
 });
 
 it('Test reveal', async () => {
 
-  const card = cards[2];
-  const o = new Card({ card, reveal: false });
-    
-  console.log(`Reveal state: ${o.props.reveal}`);
-
-  expect(o.props.reveal).toBe(false);
-  
+  const o  = cards[2];
+  const element = React.createElement<CardProps>(Card, {card: o, reveal: false});
+  expect(element.props.reveal).toBe(false);
 
 });
 
