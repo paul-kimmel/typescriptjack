@@ -8,10 +8,10 @@
     margin-left: 100px;
   }
 
-  &>div {
+  & > div {
     display: block;
 
-    &>div {
+    & > div {
       display: flex;
     }
   }

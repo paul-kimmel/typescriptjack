@@ -1,6 +1,5 @@
 import React from "react";
-import './playerHand.scss';
-
+import "./playerHand.scss";
 
 export const Outcome = {
   Current: "current",
@@ -12,10 +11,6 @@ export const Outcome = {
 
 export type Outcome = (typeof Outcome)[keyof typeof Outcome];
 
-
-
-export const PlayState: React.FC<{playState?: Outcome}> = ({playState}) => {
-   return (
-      <span className="play-state">{playState ?? Outcome.Current}</span>
-    )
-}
+export const PlayState: React.FC<{ playState?: Outcome }> = ({ playState }) => {
+  return <span className="play-state">{playState ?? Outcome.Current}</span>;
+};

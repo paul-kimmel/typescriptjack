@@ -1,9 +1,8 @@
-import React from 'react';
-import { PlayerHand } from './playerHand';
-import { PlayerName } from './playerName';
-import './playerHands.scss';
-import type { CardData } from './card';
-
+import React from "react";
+import { PlayerHand } from "./playerHand";
+import { PlayerName } from "./playerName";
+import "./playerHands.scss";
+import type { CardData } from "./card";
 
 export const PlayerHands: React.FC<{ hands: CardData[][] }> = ({ hands }) => {
   return (
@@ -14,6 +13,4 @@ export const PlayerHands: React.FC<{ hands: CardData[][] }> = ({ hands }) => {
       ))}
     </div>
   );
-}
-
-
+};

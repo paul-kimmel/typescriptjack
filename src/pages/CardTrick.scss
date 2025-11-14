@@ -1,9 +1,13 @@
-  .spin {
-    display: inline-block;
-    animation: spin .1s linear 3;
-  }
+.spin {
+  display: inline-block;
+  animation: spin 0.1s linear 3;
+}
 
-  @keyframes spin {
-    from { transform: rotate(0deg); }
-    to   { transform: rotate(360deg); }
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}

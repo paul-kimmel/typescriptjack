@@ -1,21 +1,18 @@
-
-
 .dealer-hand {
   /*border: 3px solid red;*/
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  div{
+
+  div {
     display: flex;
 
-    &>span{
+    & > span {
       top: -40px;
       position: relative;
     }
   }
-
 }
 
 .player-name {

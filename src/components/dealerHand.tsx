@@ -1,6 +1,6 @@
 import React from "react";
 import { Hand } from "./hand";
-import {type CardData } from "./card";
+import { type CardData } from "./card";
 import "./dealerHand.scss";
 
 type DealerHandProps = {
@@ -8,8 +8,7 @@ type DealerHandProps = {
   reveal: boolean;
 };
 
-export const DealerHand: React.FC<DealerHandProps> = ({hand, reveal})=>{
-
+export const DealerHand: React.FC<DealerHandProps> = ({ hand, reveal }) => {
   const playerName = "Dealer";
   return (
     <div className="dealer-hand">
@@ -19,6 +18,6 @@ export const DealerHand: React.FC<DealerHandProps> = ({hand, reveal})=>{
       </div>
     </div>
   );
-}
+};
 
 DealerHand.displayName = "DealerHand";

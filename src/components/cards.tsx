@@ -53,18 +53,17 @@ import kingDiamonds from "./images/KD.png";
 import cardBack from "./images/back.png";
 import type { CardData } from "./card";
 
-export const cards : CardData[] = [
+export const cards: CardData[] = [
   {
-    
     index: 0,
     face: "ace",
     lowValue: 1,
     highValue: 11,
     textSuit: "spades",
-    suit : "♠",
+    suit: "♠",
     url: aceSpades,
-    back: cardBack,    
-    toString: () =>  "A♠" 
+    back: cardBack,
+    toString: () => "A♠",
   },
   {
     index: 1,
@@ -74,9 +73,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: twoSpades,
-    back: cardBack,    
-    toString : () => "2♠"
-    
+    back: cardBack,
+    toString: () => "2♠",
   },
   {
     index: 2,
@@ -86,8 +84,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: threeSpades,
-    back: cardBack,    
-    toString: () => "3♠"
+    back: cardBack,
+    toString: () => "3♠",
   },
   {
     index: 3,
@@ -97,8 +95,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: fourSpades,
-    back: cardBack,    
-    toString: () => "4♠"
+    back: cardBack,
+    toString: () => "4♠",
   },
   {
     index: 4,
@@ -108,8 +106,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: fiveSpades,
-    back: cardBack,    
-    toString: () => "5♠"
+    back: cardBack,
+    toString: () => "5♠",
   },
   {
     index: 5,
@@ -119,8 +117,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: sixSpades,
-    back: cardBack,    
-    toString: () => "6♠"
+    back: cardBack,
+    toString: () => "6♠",
   },
   {
     index: 6,
@@ -130,8 +128,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: sevenSpades,
-    back: cardBack,    
-    toString: () => "7♠"
+    back: cardBack,
+    toString: () => "7♠",
   },
   {
     index: 7,
@@ -141,8 +139,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: eightSpades,
-    back: cardBack,    
-    toString: () => "8♠"
+    back: cardBack,
+    toString: () => "8♠",
   },
   {
     index: 8,
@@ -152,8 +150,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: nineSpades,
-    back: cardBack,    
-    toString: () => "9♠"
+    back: cardBack,
+    toString: () => "9♠",
   },
   {
     index: 9,
@@ -163,8 +161,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: tenSpades,
-    back: cardBack,    
-    toString: () => "10♠"
+    back: cardBack,
+    toString: () => "10♠",
   },
   {
     index: 10,
@@ -174,8 +172,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: jackSpades,
-    back: cardBack,    
-    toString: () => "J♠"
+    back: cardBack,
+    toString: () => "J♠",
   },
   {
     index: 11,
@@ -185,8 +183,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: queenSpades,
-    back: cardBack,    
-    toString: () => "Q♠"
+    back: cardBack,
+    toString: () => "Q♠",
   },
   {
     index: 12,
@@ -196,8 +194,8 @@ export const cards : CardData[] = [
     textSuit: "spades",
     suit: "♠",
     url: kingSpades,
-    back: cardBack,    
-    toString: () => "K♠"
+    back: cardBack,
+    toString: () => "K♠",
   },
   {
     index: 13,
@@ -207,8 +205,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: aceClubs,
-    back: cardBack,    
-    toString: () => "A♣"
+    back: cardBack,
+    toString: () => "A♣",
   },
   {
     index: 14,
@@ -218,8 +216,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: twoClubs,
-    back: cardBack,    
-    toString: () => "2♣"
+    back: cardBack,
+    toString: () => "2♣",
   },
   {
     index: 15,
@@ -229,8 +227,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: threeClubs,
-    back: cardBack,    
-    toString: () => "3♣"
+    back: cardBack,
+    toString: () => "3♣",
   },
   {
     index: 16,
@@ -240,8 +238,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: fourClubs,
-    back: cardBack,    
-    toString: () => "4♣"
+    back: cardBack,
+    toString: () => "4♣",
   },
   {
     index: 17,
@@ -251,8 +249,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: fiveClubs,
-    back: cardBack,    
-    toString: () => "5♣"
+    back: cardBack,
+    toString: () => "5♣",
   },
   {
     index: 18,
@@ -262,8 +260,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: sixClubs,
-    back: cardBack,    
-    toString: () => "6♣"
+    back: cardBack,
+    toString: () => "6♣",
   },
   {
     index: 19,
@@ -273,8 +271,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: sevenClubs,
-    back: cardBack,    
-    toString: () => "7♣"
+    back: cardBack,
+    toString: () => "7♣",
   },
   {
     index: 20,
@@ -284,8 +282,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: eightClubs,
-    back: cardBack,    
-    toString: () => "8♣"
+    back: cardBack,
+    toString: () => "8♣",
   },
   {
     index: 21,
@@ -295,8 +293,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: nineClubs,
-    back: cardBack,    
-    toString: () => "9♣"
+    back: cardBack,
+    toString: () => "9♣",
   },
   {
     index: 22,
@@ -306,8 +304,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: tenClubs,
-    back: cardBack,    
-    toString: () => "10♣"
+    back: cardBack,
+    toString: () => "10♣",
   },
   {
     index: 23,
@@ -317,8 +315,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: jackClubs,
-    back: cardBack,    
-    toString: () => "J♣"
+    back: cardBack,
+    toString: () => "J♣",
   },
   {
     index: 24,
@@ -328,8 +326,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: queenClubs,
-    back: cardBack,    
-    toString: () => "Q♣"
+    back: cardBack,
+    toString: () => "Q♣",
   },
   {
     index: 25,
@@ -339,8 +337,8 @@ export const cards : CardData[] = [
     textSuit: "clubs",
     suit: "♣",
     url: kingClubs,
-    back: cardBack,    
-    toString: () => "K♣"
+    back: cardBack,
+    toString: () => "K♣",
   },
   {
     index: 26,
@@ -350,8 +348,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: aceHearts,
-    back: cardBack,    
-    toString: () => "A♥"
+    back: cardBack,
+    toString: () => "A♥",
   },
   {
     index: 27,
@@ -361,8 +359,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: twoHearts,
-    back: cardBack,    
-    toString: () => "2♥"
+    back: cardBack,
+    toString: () => "2♥",
   },
   {
     index: 28,
@@ -372,8 +370,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: threeHearts,
-    back: cardBack,    
-    toString: () => "3♥"
+    back: cardBack,
+    toString: () => "3♥",
   },
   {
     index: 29,
@@ -383,8 +381,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: fourHearts,
-    back: cardBack,    
-    toString: () => "4♥"
+    back: cardBack,
+    toString: () => "4♥",
   },
   {
     index: 30,
@@ -394,8 +392,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: fiveHearts,
-    back: cardBack,    
-    toString: () => "5♥"
+    back: cardBack,
+    toString: () => "5♥",
   },
   {
     index: 31,
@@ -405,8 +403,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: sixHearts,
-    back: cardBack,    
-    toString: () => "6♥"
+    back: cardBack,
+    toString: () => "6♥",
   },
   {
     index: 32,
@@ -416,8 +414,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: sevenHearts,
-    back: cardBack,    
-    toString: () => "7♥"
+    back: cardBack,
+    toString: () => "7♥",
   },
   {
     index: 33,
@@ -427,8 +425,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: eightHearts,
-    back: cardBack,    
-    toString: () => "8♥"
+    back: cardBack,
+    toString: () => "8♥",
   },
   {
     index: 34,
@@ -438,8 +436,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: nineHearts,
-    back: cardBack,    
-    toString: () => "9♥"
+    back: cardBack,
+    toString: () => "9♥",
   },
   {
     index: 35,
@@ -449,8 +447,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: tenHearts,
-    back: cardBack,    
-    toString: () => "10♥"
+    back: cardBack,
+    toString: () => "10♥",
   },
   {
     index: 36,
@@ -460,8 +458,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: jackHearts,
-    back: cardBack,    
-    toString: () => "J♥"
+    back: cardBack,
+    toString: () => "J♥",
   },
   {
     index: 37,
@@ -471,8 +469,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: queenHearts,
-    back: cardBack,    
-    toString: () => "Q♥"
+    back: cardBack,
+    toString: () => "Q♥",
   },
   {
     index: 38,
@@ -482,8 +480,8 @@ export const cards : CardData[] = [
     textSuit: "hearts",
     suit: "♥",
     url: kingHearts,
-    back: cardBack,    
-    toString: () => "K♥"
+    back: cardBack,
+    toString: () => "K♥",
   },
 
   {
@@ -494,8 +492,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: aceDiamonds,
-    back: cardBack,    
-    toString: () => "A♦"
+    back: cardBack,
+    toString: () => "A♦",
   },
   {
     index: 40,
@@ -505,8 +503,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: twoDiamonds,
-    back: cardBack,    
-    toString: () => "2♦"
+    back: cardBack,
+    toString: () => "2♦",
   },
   {
     index: 41,
@@ -516,8 +514,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: threeDiamonds,
-    back: cardBack,    
-    toString: () => "3♦"
+    back: cardBack,
+    toString: () => "3♦",
   },
   {
     index: 42,
@@ -527,8 +525,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: fourDiamonds,
-    back: cardBack,    
-    toString: () => "4♦"
+    back: cardBack,
+    toString: () => "4♦",
   },
   {
     index: 43,
@@ -538,8 +536,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: fiveDiamonds,
-    back: cardBack,    
-    toString: () => "5♦"
+    back: cardBack,
+    toString: () => "5♦",
   },
   {
     index: 44,
@@ -549,8 +547,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: sixDiamonds,
-    back: cardBack,    
-    toString: () => "6♦"
+    back: cardBack,
+    toString: () => "6♦",
   },
   {
     index: 45,
@@ -560,8 +558,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: sevenDiamonds,
-    back: cardBack,    
-    toString: () => "7♦"
+    back: cardBack,
+    toString: () => "7♦",
   },
   {
     index: 46,
@@ -571,8 +569,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: eightDiamonds,
-    back: cardBack,    
-    toString: () => "8♦"
+    back: cardBack,
+    toString: () => "8♦",
   },
   {
     index: 47,
@@ -582,8 +580,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: nineDiamonds,
-    back: cardBack,    
-    toString: () => "9♦"
+    back: cardBack,
+    toString: () => "9♦",
   },
   {
     index: 48,
@@ -593,8 +591,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: tenDiamonds,
-    back: cardBack,    
-    toString: () => "10♦"
+    back: cardBack,
+    toString: () => "10♦",
   },
   {
     index: 49,
@@ -604,8 +602,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: jackDiamonds,
-    back: cardBack,    
-    toString: () => "J♦"
+    back: cardBack,
+    toString: () => "J♦",
   },
   {
     index: 50,
@@ -615,8 +613,8 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: queenDiamonds,
-    back: cardBack,    
-    toString: () => "Q♦"
+    back: cardBack,
+    toString: () => "Q♦",
   },
   {
     index: 51,
@@ -626,8 +624,7 @@ export const cards : CardData[] = [
     textSuit: "diamonds",
     suit: "♦",
     url: kingDiamonds,
-    back: cardBack,    
-    toString: () => "K♦"
+    back: cardBack,
+    toString: () => "K♦",
   },
-
 ];

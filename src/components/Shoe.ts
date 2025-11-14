@@ -1,8 +1,7 @@
-import { cards } from './cards';
-import { type CardData } from './card';
+import { cards } from "./cards";
+import { type CardData } from "./card";
 
-
-export interface Shoe{
+export interface Shoe {
   deckCount: number;
   cardList: CardData[];
   initialize: () => void;
@@ -18,49 +17,50 @@ export interface Shoe{
   removeAt: (index: number) => CardData[] | undefined;
 }
 
-export function createShoe(deckCount: number) :Shoe {
-
+export function createShoe(deckCount: number): Shoe {
   if (deckCount <= 0) throw new Error(`Invalid deck count ${deckCount}`);
   let cardList: CardData[] = [];
 
-  function addDecks(){
+  function addDecks() {
     for (let i = 0; i < deckCount; i++) cardList.push(...cards);
   }
 
-  function shuffle(){
-    let current = cardList.length, random;
+  function shuffle() {
+    let current = cardList.length,
+      random;
     while (current !== 0) {
       random = Math.floor(Math.random() * current);
       current--;
-      [cardList[current], cardList[random]] = [cardList[random], cardList[current]];
+      [cardList[current], cardList[random]] = [
+        cardList[random],
+        cardList[current],
+      ];
     }
   }
 
   function initialize() {
-   cardList = [];
-   addDecks();
-   shuffle();
+    cardList = [];
+    addDecks();
+    shuffle();
   }
-   
- 
+
   initialize();
 
-  function remove(card : CardData): void {
+  function remove(card: CardData): void {
     removeAt(cardList.indexOf(card));
   }
 
-  function removeAt(index : number) {
+  function removeAt(index: number) {
     try {
       return cardList.splice(index, 1);
-    }
-    catch (e) {
+    } catch (e) {
       console.log(e);
     }
   }
 
-  function getPair() :CardData[] {
+  function getPair(): CardData[] {
     const card1 = getNextCard();
-    let cards : CardData[] = [];
+    let cards: CardData[] = [];
     cards.push(card1);
 
     for (let i = 0; i < cardList.length; i++) {
@@ -76,19 +76,19 @@ export function createShoe(deckCount: number) :Shoe {
     throw new Error("No matching card for split hand");
   }
 
-  function get(index : number) {
+  function get(index: number) {
     return cardList[index];
   }
 
-  function count() : number {
+  function count(): number {
     return cardList.length;
   }
 
-   function getNextCard() : CardData {
+  function getNextCard(): CardData {
     console.log(`getNextCard called, remaining cards: ${count()}`);
     if (count() === 0) initialize();
-    const card =  cardList.shift();
-    if(!card) throw new Error("No cards left in shoe");
+    const card = cardList.shift();
+    if (!card) throw new Error("No cards left in shoe");
     return card;
   }
 
@@ -106,6 +106,19 @@ export function createShoe(deckCount: number) :Shoe {
     }
   }
 
-  return {deckCount, cardList, initialize, shuffle, addDecks, getNextCard, count, moreCards, 
-    dump, get, getPair, remove, removeAt};
+  return {
+    deckCount,
+    cardList,
+    initialize,
+    shuffle,
+    addDecks,
+    getNextCard,
+    count,
+    moreCards,
+    dump,
+    get,
+    getPair,
+    remove,
+    removeAt,
+  };
 }
