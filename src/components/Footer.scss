@@ -3,15 +3,11 @@
   display: flex;
   background-color: black;
   color: white;
-
-  div:not(:last-child) {
-    width: 15%;
-    border: 1px outset silver;
-    padding-left: 4px;
-  }
-
-  div:last-child {
-    width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  
+  div {
+    width: 20%;
     border: 1px outset silver;
     padding-left: 4px;
     white-space: nowrap;
