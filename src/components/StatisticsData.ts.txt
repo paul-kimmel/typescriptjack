@@ -1,0 +1,122 @@
+import {Outcome} from './playState';
+
+
+export interface DataPoint {
+  playState: Outcome;
+  isBlackJack: boolean;
+  bet: number;
+  money: number;
+  change: number;
+}
+
+export type StatsStore = DataPoint[];
+export const initialStatsStore: StatsStore = [];
+
+export const addDataPoint = (store: StatsStore, dataPoint: DataPoint): StatsStore => [...store, dataPoint];
+
+const getCount = (store: StatsStore, playState : Outcome) : number =>
+  store.filter(dp => dp.playState === playState).length;
+
+export const getSurrenders = (store: StatsStore): number => getCount(store, Outcome.Surrender  );
+export const getWins = (store: StatsStore):number => getCount(store, Outcome.Win );
+export const getLosses = (store: )
+
+/* GPT code: 
+//Need the ability to calculate statistics; probably don't need to store at all
+import { PlayState } from "./PlayState";
+import { DataPoint } from "./DataPoint";
+
+// The only real state we need: the list of data points
+export type StatsStore = DataPoint[];
+
+// Initial state (empty statistics)
+export const initialStatsStore: StatsStore = [];
+
+// --- Mutator-style helpers (but still immutable) ---
+
+export const addDataPoint = (store: StatsStore, dataPoint: DataPoint): StatsStore => [
+  ...store,
+  dataPoint,
+];
+
+// --- Derivation helpers (read-only) ---
+
+const getCount = (store: StatsStore, playState: PlayState): number =>
+  store.filter(dp => dp.playState === playState).length;
+
+export const getSurrenders = (store: StatsStore): number =>
+  getCount(store, PlayState.SURRENDER);
+
+export const getWins = (store: StatsStore): number =>
+  getCount(store, PlayState.WIN);
+
+export const getLosses = (store: StatsStore): number =>
+  getCount(store, PlayState.LOSE);
+
+export const getPushes = (store: StatsStore): number =>
+  getCount(store, PlayState.PUSH);
+
+export const count = (store: StatsStore): number => store.length;
+
+const getSum = (store: StatsStore, playState: PlayState): number =>
+  store
+    .filter(dp => dp.playState === playState)
+    .reduce((sum, dp) => sum + dp.change, 0);
+
+export const getTotalAmountWon = (store: StatsStore): number =>
+  getSum(store, PlayState.WIN);
+
+export const getTotalAmountLoss = (store: StatsStore): number =>
+  getSum(store, PlayState.LOSE);
+
+export const getAverageAmountWon = (store: StatsStore): number => {
+  const wins = getWins(store);
+  return wins === 0 ? 0 : getTotalAmountWon(store) / wins;
+};
+
+export const getAverageAmountLoss = (store: StatsStore): number => {
+  const losses = getLosses(store);
+  return losses === 0 ? 0 : getTotalAmountLoss(store) / losses;
+};
+
+export const getPercentageOfWins = (store: StatsStore): number => {
+  const total = count(store);
+  return total === 0 ? 0 : (getWins(store) / total) * 100;
+};
+
+export const getPercentageOfLosses = (store: StatsStore): number => {
+  const total = count(store);
+  return total === 0 ? 0 : (getLosses(store) / total) * 100;
+};
+
+export const getPercentageOfPushes = (store: StatsStore): number => {
+  const total = count(store);
+  return total === 0 ? 0 : (getPushes(store) / total) * 100;
+};
+
+export const getNetWinLoss = (store: StatsStore): number =>
+  getTotalAmountWon(store) + getTotalAmountLoss(store);
+
+export const getBlackJacks = (store: StatsStore): number =>
+  store.filter(dp => dp.isBlackJack).length;
+
+export const getPercentageOfBlackJacks = (store: StatsStore): number => {
+  const total = count(store);
+  return total === 0 ? 0 : (getBlackJacks(store) / total) * 100;
+};
+
+// Optional: net average win/loss per hand, fixed from original logic
+export const getNetAverageWinLoss = (store: StatsStore): number => {
+  const wins = getWins(store);
+  const losses = getLosses(store);
+  const totalHands = wins + losses;
+
+  if (totalHands === 0) return 0;
+
+  const avgWin = getAverageAmountWon(store);
+  const avgLoss = getAverageAmountLoss(store);
+
+  // Your original logic was broken; this is a sane version:
+  return (avgWin * wins + avgLoss * losses) / totalHands;
+};
+*/

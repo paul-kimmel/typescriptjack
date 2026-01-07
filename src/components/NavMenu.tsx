@@ -17,7 +17,9 @@ import {
 } from "reactstrap";
 import { Link } from "react-router-dom";
 import "./NavMenu.scss";
-import GameWrapper from "./GameWrapper";
+import GW from "./GameWrapper.tsx";
+
+   
 
 export const NavMenu: React.FC = () => {
   const [collapsed, setCollapsed] = useState(true);
@@ -26,16 +28,16 @@ export const NavMenu: React.FC = () => {
     setCollapsed((prev) => !prev);
   };
 
-  const hitClick = () => GameWrapper.hit();
-  const standClick = () => GameWrapper.stand();
-  const dealClick = () => GameWrapper.deal();
-  const newGameClick = () => GameWrapper.newGame();
-  const surrenderClick = () => GameWrapper.surrender();
-  const splitClick = () => GameWrapper.split();
-  const doubleClick = () => GameWrapper.double();
-  const increaseBetClick = () => GameWrapper.increaseBet();
-  const decreaseBetClick = () => GameWrapper.decreaseBet();
-  const dealSplitGameClick = () => GameWrapper.dealSplitGame();
+  const hitClick = () => GW.hit();
+  const standClick = () => GW.stand();
+  const dealClick = () => GW.deal();
+  const newGameClick = () => GW.newGame();
+  const surrenderClick = () => GW.surrender();
+  const splitClick = () => GW.split();
+  const doubleClick = () => GW.double();
+  const increaseBetClick = () => GW.increaseBet();
+  const decreaseBetClick = () => GW.decreaseBet();
+  const dealSplitGameClick = () => GW.dealSplitGame();
 
   const onKeyDown = (event: KeyboardEvent) => {
     
